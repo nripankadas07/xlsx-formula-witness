@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest -v
+      - run: python -m compileall -q xlsx_formula_witness.py
+      - run: python -m pip wheel --no-deps . -w dist
+      - run: python -m venv .venv
+      - run: .venv/bin/python -m pip install --no-deps dist/*.whl
+      - run: python verify_installed.py .venv/bin/python

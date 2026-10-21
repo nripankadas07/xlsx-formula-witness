@@ -1,0 +1,39 @@
+{
+  "occurrence": "GH-20261021",
+  "state": "VALIDATED",
+  "demand": "Inferred; no verified request for this new tool.",
+  "acceptance": [
+    "The generated real workbook expands B3 to A3+$A$1.",
+    "Shared/absolute/string/function/range translation; real ZIP roundtrip; missing/outside/duplicate/overlapping masters; follower override; archive/XML rejection. Optional oracle_check.py compared15 translations and a real shared workbook with installed openpyxl3.1.5 locally; not a CI/runtime dependency.",
+    "Clean installed CLI outside checkout, error case and source preservation."
+  ],
+  "discovery": "Searchable README/topics and small reproducible example; no outreach/adoption claim.",
+  "inventory_compared": 208,
+  "mutual_distinction": "Schema evolution, OOXML formula structure, event-time state, expiry stock allocation and three-version text edits are separate products/users/contracts. Shared packaging is infrastructure.",
+  "originality": "Original AI-assisted code and invented fixtures; no third-party implementation/prose copied.",
+  "repo": "xlsx-formula-witness",
+  "user": "Spreadsheet export developers inspecting missing or surprising shared-formula cells.",
+  "pain": "A shared follower can omit its formula text, making raw ZIP inspection misleading; caches can be stale.",
+  "capability": "Inspect XLSX shared-formula groups and expand supported A1 references with structural findings and master-cell evidence.",
+  "alternatives": [
+    "qax-os/excelize",
+    "jmcnamara/XlsxWriter",
+    "apache/poi"
+  ],
+  "highest": "qax-os/excelize",
+  "query": "xlsx formula",
+  "topics": [
+    "xlsx",
+    "ooxml",
+    "spreadsheet",
+    "python"
+  ],
+  "expected": "The generated real workbook expands B3 to A3+$A$1.",
+  "limits": "Read-only conventional xl/worksheets/*.xml parts in transitional OOXML; 4MiB compressed AND total uncompressed ZIP,100 entries,16 worksheets,5000 cells per sheet,8192 formula characters. Strict UTF-8 worksheet XML, no DTD/entities/duplicate archive paths or cells. Master is the unique ref-bearing shared member; follower text is overridden. Outside-range members and overlapping master ranges are findings. Lexical A1 translation supports absolute/relative coordinates, ranges, quoted strings, numbers, function tokens, operators and TRUE/FALSE. Names, sheet/external/table references, translated out-of-bounds references are reported unsupported. This is NOT a formula grammar validator/evaluator, cache-freshness check, full XLSX validator or relationship resolver. Nonshared/array/data-table formulas are listed but not analyzed. Missing nonshared cells inside a shared range are not invented or treated as shared. No Excel application execution.",
+  "distinct": "Existing CSV and accounting tools do not inspect OOXML shared master/follower structures. This reads a real spreadsheet package and never evaluates or changes it.",
+  "checks": "Shared/absolute/string/function/range translation; real ZIP roundtrip; missing/outside/duplicate/overlapping masters; follower override; archive/XML rejection. Optional oracle_check.py compared15 translations and a real shared workbook with installed openpyxl3.1.5 locally; not a CI/runtime dependency.",
+  "primary": [
+    "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.cellformula?view=openxml-3.0.1",
+    "https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/working-with-formulas"
+  ]
+}

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "xlsx-formula-witness"
+version = "0.1.0"
+description = "Inspect XLSX shared-formula groups and expand supported A1 references with structural findings and master-cell evidence."
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = []
+[project.scripts]
+xlsx-formula-witness = "xlsx_formula_witness:main"
+[tool.setuptools]
+py-modules = ["xlsx_formula_witness"]

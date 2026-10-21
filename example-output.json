@@ -1,0 +1,29 @@
+{
+  "sheets": [
+    {
+      "part": "xl/worksheets/sheet1.xml",
+      "formulas": [
+        {
+          "cell": "B2",
+          "kind": "shared",
+          "source": "A2+$A$1",
+          "cached_value_present": false,
+          "group": "0",
+          "expanded": "A2+$A$1",
+          "master": "B2"
+        },
+        {
+          "cell": "B3",
+          "kind": "shared",
+          "source": "",
+          "cached_value_present": false,
+          "group": "0",
+          "expanded": "A3+$A$1",
+          "master": "B2"
+        }
+      ]
+    }
+  ],
+  "findings": [],
+  "scope": "shared-group structure and lexical A1 translation only; formulas are not evaluated or syntax-validated; cached values may be stale"
+}

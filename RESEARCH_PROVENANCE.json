@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-21",
+  "query": {
+    "query": "xlsx formula",
+    "url": "https://github.com/search?q=xlsx%20formula&type=repositories&s=stars&o=desc",
+    "observed": "2026-10-21T06:19:16.581Z"
+  },
+  "search_result_body": "Sort by: Most stars\nSave\nqax-os/excelize\nGo language library for reading and writing Microsoft Excel\u2122 (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets\nvisualization\nmicrosoft\ngo\nagent\nformula\nGo\n\u00b7\n21k\n\u00b7\nUpdated yesterday\nStar\ndream-num/Luckysheet\nPublic archive\nLuckysheet upgraded to Univer\njavascript\nformula\nchart\ncanvas\nexcel\nJavaScript\n\u00b7\n16.6k\n\u00b7\nUpdated on Aug 19, 2025\nStar\nharis-musa/excel-mcp-server\nExcel MCP server: let AI (Claude, Cursor, Codex) create and edit Excel files with charts, PivotTables, slicers and formulas. No Excel req\u2026\npython\ncharts\nautomation\nai\nmcp\nPython\n\u00b7\n4.3k\n\u00b7\nUpdated 23 hours ago\nStar\nhandsontable/hyperformula\nHyperFormula is an open-source headless spreadsheet for business web apps. It comes with over 400 formulas, CRUD operations, undo-redo, c\u2026\nformula\ntypescript\nforms\nexcel\nxlsx\nTypeScript\n\u00b7\n2.8k\n\u00b7\nUpdated 16 hours ago\nStar\nunvell/ReoGrid\nFast and powerful .NET spreadsheet component, support data format, freeze, outline, formula calculation, chart, script execution and etc.\u2026\nformula\ngrid\ndotnet\nexcel\nwpf\nC#\n\u00b7\n1.6k\n\u00b7\nUpdated on Sep 3\nStar\nxuri/excelize-wasm\nA WebAssembly build of the Go Excelize library for reading and writing Microsoft Excel\u2122 (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets\njavascript\nmicrosoft\ngo\ngolang\nnpm\nGo\n\u00b7\n365\n\u00b7\nUpdated on Aug 27\nStar\naVadim483/fast-excel-writer\nLightweight and very fast XLSX Excel Spreadsheet Writer in PHP. Supports full XLSX-file functionality - cell formatting, formulas, styles\u2026\nphp\nexport\nparser\nphp-library\nexcel\nPHP\n\u00b7\n315\n\u00b7\nUpdated 12 days ago\nStar\nferdinandobons/brand-docs\nBrandDocs is a set of agent skills that learn your existing Word, PowerPoint and Excel templates and generate new on-brand documents from\u2026\ntemplate-engine\nexcel\nword\nxlsx\npowerpoint\nPython\n\u00b7\n279\n\u00b7\nUpdated on Jul 10\nStar\nxuri/efp\nGo Language Microsoft Excel\u2122 Formula Parser\ngo\ngolang\nformula\nparser\nexcel\nGo\n\u00b7\n137\n\u00b7\nUpdated 27 days ago\nStar\nfabiooshiro/xlsx-calc\njavascript nodejs excel formula parser\nnodejs\njavascript\nformula\nexcel\nnode-js\nJavaScript\n\u00b7\n122\n\u00b7\nUpdated on Mar 26\nStar\nPrevious1234567\u202627Next\nSponsor open source projects you depend on\nContributors are working behind the scenes to make open source better for everyone\u2014give them the help and recognition they deserve.\nExplore sponsorable projects\nHow can we improve search? Give feedback\nProTip!\u00a0Press the / key to activate the search input again and adjust your query.",
+  "highest_star_relevant_found": "qax-os/excelize",
+  "comparables": [
+    {
+      "full_name": "qax-os/excelize",
+      "html_url": "https://github.com/qax-os/excelize",
+      "stargazers_count": 21008,
+      "pushed_at": "2026-10-20T03:36:41Z",
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "description": "Go language library for reading and writing Microsoft Excel\u2122 (XLAM / XLSM / XLSX / XLTM / XLTX) spreadsheets",
+      "observed": "2026-10-21",
+      "recent_open_items": [
+        {
+          "title": "This closes #2449, correct blank cell comparisons",
+          "url": "https://github.com/qax-os/excelize/pull/2457",
+          "is_pr": true,
+          "body_excerpt": "## Description\n\nBlank cells were converted to numeric zero before every comparison. For a blank A1, this made `A1=\"\"` return FALSE and `A1=\"0\"` return TRUE.\n\nUse an empty string when comparing a blank cell with text, FALSE when comparing it with a logical value, and zero otherwise. The change applies to all six comparison operators in either operand order.\n\n## Related Issue\n\nFixes #2449.\n\n## How Has This Been Tested\n\n- The new regression test fails before the fix and passes after it.\n- Tests cover text, numbers, logical values, cell references, IF, error handling, arithmetic, and text joining.\n- `go test ./... -count=1 -timeout 20m`\n- `go test -race ./... -run '^TestCalc' -count=1 -timeout 10m`\n- `go vet ./...`\n\nTested with Go 1.27.1 on macOS arm64.\n\nA full race-enabled run was also attempted, but the process was killed before completion.\n\n## Types of changes\n\n- [x] Bug fix\n"
+        },
+        {
+          "title": "This closes #2450, fix incorrect result of the binary search in lookup functions",
+          "url": "https://github.com/qax-os/excelize/pull/2455",
+          "is_pr": true,
+          "body_excerpt": "\n# PR Details\n\n## Description\n\nThree changes in `lookupBinarySearch`, the path taken by HLOOKUP and VLOOKUP with `range_lookup` TRUE and by XLOOKUP with `search_mode` 2 or -2.\n\n`lookupSkipBlank` moves the probe position off a blank cell to the nearest cell holding a value inside the still open interval, and ends the search when the interval holds only blanks. A blank used to be compared as the number 0 through `ToNumber()` and steered the search into the wrong half.\n\n`lookupCompare` maps the `criteriaNe` that `compareFormulaArg` returns for a type mismatch onto the lookup sort order, in which all numbers come before all text. A text entry behind the numbers no longer aborts a numeric search.\n\nThe fallback to the nearest smaller match is now skipped for `matchModeExact` and `matchModeWildcard`, so an exact match mode returns no result instead of a neighbour.\n\n`lookupSearchArg` is a pure extraction of the `lhs` preparation that was inline before, with no behaviour change. It keeps the cy"
+        },
+        {
+          "title": "This closes #2448, fix incorrect equality result for a number and text operand",
+          "url": "https://github.com/qax-os/excelize/pull/2454",
+          "is_pr": true,
+          "body_excerpt": "\n# PR Details\n\n## Description\n\nAdds the helper `numberTextMismatch` and calls it from `calcEq` and `calcNEq`. When one operand is a number and the other one is text, `=` returns FALSE and `<>` returns TRUE instead of falling through to the comparison of the formatted values.\n\nThe helper is declared above `calcEq` and reads only `Type` and the logical flag. It is called after the existing text against text branch, so `strings.EqualFold` keeps handling that case and `\"a\"=\"A\"` stays TRUE. A logical value is excluded, it reaches the comparison as a number holding the logical flag and its behaviour is unchanged.\n\n## Related Issue\n\nCloses #2448\n\n## Motivation and Context\n\n`rOpd.Value() == lOpd.Value()` cannot tell the number 1 from the text \"1\", because both format to `1`. Excel 365 (Excel for the web, 16.0300) returns FALSE for `1=\"1\"` and TRUE for `1<>\"1\"`. The ordering operators `<`, `<=`, `>` and `>=` already have the type branches for this; only `=` and `<>` were missing them.\n\n## How H"
+        }
+      ]
+    },
+    {
+      "full_name": "jmcnamara/XlsxWriter",
+      "html_url": "https://github.com/jmcnamara/XlsxWriter",
+      "stargazers_count": 3983,
+      "pushed_at": "2026-08-04T23:41:16Z",
+      "license": {
+        "key": "bsd-2-clause",
+        "name": "BSD 2-Clause \"Simplified\" License",
+        "spdx_id": "BSD-2-Clause",
+        "url": "https://api.github.com/licenses/bsd-2-clause",
+        "node_id": "MDc6TGljZW5zZTQ="
+      },
+      "description": "A Python module for creating Excel XLSX files.",
+      "observed": "2026-10-21T06:01:40.394Z",
+      "recent_open_items": [
+        {
+          "title": "Honor strings_to_formulas for brace-wrapped array formulas",
+          "url": "https://github.com/jmcnamara/XlsxWriter/pull/1213",
+          "is_pr": true,
+          "body_excerpt": "Fixes #1212.\n\nWhen `strings_to_formulas=False`, `write()` preserves `=1+2` as text but still converts `{=1+2}` into an array formula. Put both automatic formula branches under the existing option in `_write_token_as_string`. Explicit `write_formula()` and `write_array_formula()` calls continue to write formulas.\n\nThe regression tests inspect completed XLSX files from `write`, `write_row` and `write_column`, covering the default, enabled and disabled option in both normal and constant-memory modes. They also check explicit formula and string methods. The two disabled-option subcases fail before the fix.\n\nValidation: 1782 unittest tests pass on Python 3.12 and 3.14; `make test_flake8` passes. Changed-file formatting and Pylint checks pass. `make lint` stops at 349 Ruff findings that are identical on the original and modified source; the full lint target is therefore not green locally. Excel/LibreOffice execution was not tested.\n\nAI assistance: investigated, implemented and tested with Op"
+        },
+        {
+          "title": "Bug: strings_to_formulas=False still converts brace-wrapped strings to array formulas",
+          "url": "https://github.com/jmcnamara/XlsxWriter/issues/1212",
+          "is_pr": false,
+          "body_excerpt": "### Current behavior\n\nWith XlsxWriter 3.2.9, `strings_to_formulas=False` leaves `=1+2` as text, but `{=1+2}` is still serialized as an array formula. This affects exports that need to preserve literal text.\n\nThe sample prints:\n```text\nA2 {'t': 'array', 'ref': 'A2'} 1+2\n```\n\n### Expected behavior\n\nShould this option also disable automatic conversion of brace-wrapped array formulas? I would expect both strings to remain text when it is false, without changing the default or explicit formula-writing methods.\n\n### Sample code to reproduce\n\n```markdown\nimport io\nimport zipfile\nimport xml.etree.ElementTree as ET\nimport xlsxwriter\n\noutput = io.BytesIO()\nwith xlsxwriter.Workbook(output, {\"strings_to_formulas\": False}) as workbook:\n    worksheet = workbook.add_worksheet()\n    worksheet.write(\"A1\", \"=1+2\")\n    worksheet.write(\"A2\", \"{=1+2}\")\n    worksheet.write_string(\"A3\", \"{=1+2}\")\n\nwith zipfile.ZipFile(output) as archive:\n    root = ET.fromstring(archive.read(\"xl/worksheets/sheet1.xml\"))\n    "
+        },
+        {
+          "title": "Speed up object positioning on uniform-height sheets",
+          "url": "https://github.com/jmcnamara/XlsxWriter/pull/1211",
+          "is_pr": true,
+          "body_excerpt": "Closes #1210.\n\nThis skips the repeated walk through earlier rows when a sheet only has a custom default row height.\n\nAll rows have the same height in that case, so the vertical offset can be worked out directly. If any row has its own settings, the method keeps the existing loop. The column calculations, offsets and remaining object-sizing steps are unchanged.\n\nI kept `range()` in the short calculation so non-integer row indexes still raise the same errors and negative indexes keep the earlier empty-range offset.\n\nFor M objects across R rows, this removes up to O(M \u00d7 R) earlier-row work and replaces it with O(M) on uniform-height sheets. It doesn't change the rest of workbook generation, and it doesn't add a cache or index. Extra working memory stays O(1).\n\n### Checks\n\n- 1,798 tests and 16 subtests passed, including 11 new regression tests.\n- The original 1,787-test suite also passed with the pinned base method.\n- 1,050 geometry comparisons and 22 extra output/error comparisons matched"
+        }
+      ]
+    },
+    {
+      "full_name": "apache/poi",
+      "html_url": "https://github.com/apache/poi",
+      "stargazers_count": 2278,
+      "pushed_at": "2026-10-19T17:58:20Z",
+      "license": null,
+      "description": "Mirror of Apache POI gitbox. The Java API for Microsoft Documents.",
+      "observed": "2026-10-21T06:01:39.756Z",
+      "recent_open_items": [
+        {
+          "title": "SVGImageRenderer: only load embedded resources from SVG pictures",
+          "url": "https://github.com/apache/poi/pull/1452",
+          "is_pr": true,
+          "body_excerpt": "Repro: put an SVG picture in a .pptx whose markup contains `<image xlink:href=\"file:///path/to/secret.png\" width=\"100\" height=\"100\"/>` or `<use xlink:href=\"file:///path/to/other.svg#id\"/>`, then render the slide with `XSLFSlide.draw` or `PPTX2PNG`. The file is read from the local disk of the machine doing the rendering and drawn into the output, so a presentation converted to thumbnails on a server shows that server's images and SVG files in the result. `http:` references are already refused.\nCause: `SVGUserAgent` inherits `UserAgentAdapter.getExternalResourceSecurity`, which returns Batik's `DefaultExternalResourceSecurity` (a same-host check). `SVGImageRenderer` loads the picture with an empty document URI, so the document host is null, and a `file:` URL's host is null too, so the check passes.\nFix: `SVGUserAgent` returns `EmbededExternalResourceSecurity`, which allows only `data:` URLs. An SVG picture is self-contained in the package and has no location of its own to resolve against"
+        },
+        {
+          "title": "[experiment] build with xmlbeans 5.5.0-SNAPSHOT",
+          "url": "https://github.com/apache/poi/pull/1366",
+          "is_pr": true,
+          "body_excerpt": "Experiment to test CI against the latest xmlbeans snapshot. Not for merging.\n\n- Adds the ASF snapshots repository (repository.apache.org) to the root and subproject repositories\n- Sets `xmlbeansVersion` to `5.5.0-SNAPSHOT` (no 6.0.0-SNAPSHOT is published yet)\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)"
+        },
+        {
+          "title": "WorkbookEvaluator: walk a cell's consumers on invalidation without copying the set",
+          "url": "https://github.com/apache/poi/pull/1331",
+          "is_pr": true,
+          "body_excerpt": "Item 5 of the evaluator performance list. **Measured effect is marginal \u2014 see the numbers before deciding whether it earns its place.**\n\n### What it does\n\n`CellCacheEntry.recurseClearCachedFormulaResults` (the walk behind `notifyUpdateCell`) called `getConsumingCells()` at every node, copying the consumer set to an array, because each consumer's `clearFormulaEntry()` removes it from the set being iterated. The walk now drains the set instead: `FormulaCellCacheEntrySet.peekAny()` returns some entry, clearing it removes it, repeat until the set is empty. A scan cursor carries on from where the last entry was found, so draining stays linear despite the holes removals leave in the open-addressing array (and survives the shrink re-hash). `containsPeeked` is an O(1) guard that turns a broken invariant (a consumer that does not list this cell as an input) into an `IllegalStateException` instead of an endless loop. The listener variant of the walk (test/debug only) keeps the array because `sor"
+        }
+      ]
+    }
+  ],
+  "primary_sources": [
+    "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.cellformula?view=openxml-3.0.1",
+    "https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/working-with-formulas"
+  ],
+  "limits": "Keyword searches are scoped, not global rankings. Established relevant alternatives were supplemented directly. Broader/irrelevant keyword leaders are excluded by README scope. No competitor installed/timed or absence/superiority/support-quality claim. Current issue samples may be PRs and are not verified demand for this tool."
+}
